@@ -1,0 +1,41 @@
+.Footer_container{
+    margin: 0;
+    background-color: $color-black;
+    .footer_content{
+        width: 80%;
+        margin: auto;
+        .footer_up{
+          
+            .footer_up_title{
+                margin-top: 5px;
+                color: $color-white-0;
+            }
+            .footer_up_docx{
+                   @include text($color-gray-3,$fs-1, $fw-normal);
+                    .footer_up_docx_right, .footer_up_docx_left{
+                        margin-top: 15px;
+                    }
+                }
+                .footer_partner , .footer_mobileApp , .footer_social{
+                    img{
+                        margin: 15px;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 10px;
+                    }
+                }
+        }
+        .footer_down{
+            padding-top: 15px;
+            border-top: 1px solid $color-gray-2;
+            color: $color-gray-2;
+            p{
+                @include text($color-gray-3,$fs-1, $fw-normal);
+            }
+            img{
+                height: 100px;
+
+            }
+        }
+    }
+}

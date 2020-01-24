@@ -1,0 +1,14 @@
+.header_Container {
+  background-color: 0; }
+  .header_Container .header_logo img {
+    height: 70px;
+    width: 70px; }
+  .header_Container .header_work {
+    align-self: center; }
+    .header_Container .header_work .tag_ul li {
+      list-style-type: none;
+      margin-right: 10px; }
+  .header_Container .header_search {
+    align-self: center; }
+
+/*# sourceMappingURL=main.css.map */

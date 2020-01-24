@@ -1,0 +1,17 @@
+.Banner_container{
+    .banner_content{
+        .banner_card{
+            border: 1px solid $color-red-0;
+            color: $color-red-0;
+            .banner_info{
+                height: 70px;
+            }
+           .banner_rate{
+               i{
+                   color: goldenrod;
+               }
+           }
+        }
+       
+    }
+}

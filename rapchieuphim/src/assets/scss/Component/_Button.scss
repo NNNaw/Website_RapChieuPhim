@@ -1,0 +1,29 @@
+.button_main{
+    @include button($color-blue-2,$pd-0,$pd-1,$color-blue-0,$color-blue-0,5px);
+    @include text($color-white-0,$fs-0,$fw-normal);
+}
+.button_login{
+    @include button($color-white-0,$pd-0,$pd-1,$color-gray-3,1px solid $color-gray-3 ,5px);
+    @include text($color-red-0,$fs-0,$fw-normal);
+    
+}
+.button_sign_up{
+    @include button($color-red-0,$pd-0,$pd-1,$color-red-1,$color-red-1,5px);
+    @include text($color-white-0,$fs-0,$fw-normal);
+}
+
+// @mixin button($bg-color,$pd-y, $pd-x,$bg-hover,$boder,$border-radius) {
+//     background-color :$bg-color;
+//     padding : $pd-y $pd-x;
+//     border: $boder;
+//     border-radius: $border-radius;
+//     &:hover{
+//         background-color: $bg-hover;
+//     }
+// }
+
+// @mixin text($color,$fs,$fw) {
+//     color:$color;
+//     font-size: $fs;
+//     font-weight: $fw;
+// }

@@ -1,0 +1,25 @@
+.header_Container{
+    .row1{    
+        .header_logo{
+            img{
+                height: 70px;
+                width: 70px;
+            }
+        }
+        .header_work{
+            align-self:center; 
+            .tag_ul{
+                li{
+                    margin-right: 10px;
+                    a{
+                       color: red;
+                    }
+                }
+            }
+        }
+        .header_search{
+            align-self:center; 
+        }
+    }
+    
+}
