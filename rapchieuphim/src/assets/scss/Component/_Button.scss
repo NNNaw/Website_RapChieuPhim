@@ -3,13 +3,27 @@
     @include text($color-white-0,$fs-0,$fw-normal);
 }
 .button_login{
-    @include button($color-white-0,$pd-0,$pd-1,$color-gray-3,1px solid $color-gray-3 ,5px);
-    @include text($color-red-0,$fs-0,$fw-normal);
+    border: none;
+    margin: 0 10px;
+    
+    .button_sign_in_css{
+        @include button($color-white-0,$pd-1,$pd-2,$color-gray-3,1px solid $color-gray-3 ,5px);
+        @include text($color-red-0,$fs-0,$fw-normal);
+    }
+   
     
 }
 .button_sign_up{
-    @include button($color-red-0,$pd-0,$pd-1,$color-red-1,$color-red-1,5px);
+    border: none;
+    margin: 0 10px;
+    @include button($color-red-0,$pd-1,$pd-2,$color-red-1,1px solid $color-red-1 ,5px);
     @include text($color-white-0,$fs-0,$fw-normal);
+
+   .button_sign_up_css{
+        @include button($color-red-0,$pd-1,$pd-2,$color-red-1,1px solid $color-red-1 ,5px);
+        @include text($color-white-0,$fs-0,$fw-normal);
+       
+   }
 }
 
 // @mixin button($bg-color,$pd-y, $pd-x,$bg-hover,$boder,$border-radius) {

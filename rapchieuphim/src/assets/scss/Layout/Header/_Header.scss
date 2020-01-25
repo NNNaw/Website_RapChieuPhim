@@ -1,7 +1,10 @@
 .header_Container{
+    padding: 0;
     .row1{    
         .header_logo{
+           
             img{
+                margin-left: 10px;
                 height: 70px;
                 width: 70px;
             }
@@ -17,8 +20,10 @@
                 }
             }
         }
-        .header_search{
+        .header_sign{
+            display: flex;
             align-self:center; 
+            justify-content: flex-end;
         }
     }
     
