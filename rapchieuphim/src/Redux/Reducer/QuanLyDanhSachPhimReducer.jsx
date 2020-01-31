@@ -1,4 +1,4 @@
-import { actionType } from "../Contants/DanhSachPhimContant";
+import { actionTypes } from "../Contants/DanhSachPhimContant";
 
 const initialState = {
     danhSachPhim: [],
@@ -7,9 +7,9 @@ const initialState = {
 export const QuanLyDanhSachPhimReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case actionType.LAY_TAT_CA_DANH_SACH_PHIM: {
+        case actionTypes.LAY_TAT_CA_DANH_SACH_PHIM: {
             state.danhSachPhim = action.mangDanhSachPhim;
-            console.log('Nam');
+           
             return {...state}
         }
     }

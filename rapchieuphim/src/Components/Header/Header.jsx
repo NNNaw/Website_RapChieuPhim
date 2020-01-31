@@ -2,7 +2,23 @@ import React, { Component } from 'react'
 import logo from '../../assets/images/logo.png'
 import "../../assets/scss/main.scss"
 import { NavLink } from 'react-router-dom'
-export default class Header extends Component {
+import { connect } from 'react-redux'
+
+class Header extends Component {
+
+    renderButton = () => {
+        return (
+            <div>
+                <button className="button_login">
+                    <NavLink to="/dangnhap"><p className="button_sign_in_css">Đăng nhập</p></NavLink>
+                </button>
+                <button className="button_sign_up">
+                    <NavLink to="/dangky"><p className="button_sign_up_css">Đăng ký</p></NavLink>
+                </button>
+            </div>
+        )
+    }
+
     render() {
         return (
 
@@ -21,12 +37,7 @@ export default class Header extends Component {
                         </ul>
                     </div>
                     <div className="header_sign col-3">
-                        <button className="button_sign_up">
-                            <NavLink className="button_sign_up_css" to="/dangky">Đăng Ký</NavLink>
-                        </button>
-                        <button className="button_login">
-                            <NavLink className="button_sign_in_css" to="/dangnhap">Đăng Nhập</NavLink>
-                        </button>
+                        {this.renderButton()}
                     </div>
                 </div>
 
@@ -34,3 +45,17 @@ export default class Header extends Component {
         )
     }
 }
+
+const mapStateToProp = state => {
+    return {
+        user: state.QuanLyDanhSachNguoiDungReducer.user
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+    }
+}
+
+export default connect(mapStateToProp, mapDispatchToProps)(Header);

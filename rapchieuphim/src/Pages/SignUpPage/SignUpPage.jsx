@@ -164,10 +164,10 @@ class SignUpPage extends Component {
                             </div>
 
                             <button onClick={() => { this.props.dangKyNguoiDung(this.state.value, this.handleClear) }} className="button_sign_up">
-                               Đăng ký
+                               <p className='button_sign_up_css'>Đăng ký</p>
                             </button>
                             <button className="button_login">
-                                <NavLink className="button_sign_in_css" to="/dangnhap">Đăng Nhập</NavLink>
+                                <NavLink  to="/dangnhap"><p className="button_sign_in_css">Đăng Nhập</p></NavLink>
                             </button>
                         </form>
                     </div>

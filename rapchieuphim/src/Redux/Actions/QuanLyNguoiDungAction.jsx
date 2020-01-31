@@ -1,10 +1,10 @@
-import swal from 'sweetalert';
+import * as swal from 'sweetalert2';
 import axios from 'axios';
 import { settings } from '../../Commom/Config/settings';
+import { actionTypes } from '../Contants/DanhSachNguoiDungContant'
 
 
-
-export const dangKyNguoiDungAction = (user, handleClear , handleErrorBackend) => {
+export const dangKyNguoiDungAction = (user, handleClear) => {
     return dispatch => {
         axios({
             url: settings.domain + '/QuanLyNguoiDung/DangKy',
@@ -27,6 +27,32 @@ export const dangKyNguoiDungAction = (user, handleClear , handleErrorBackend) =>
                 text: erorr.response.data,
                 dangerMode: true,
             });
+        })
+    }
+}
+export const dangNhapACtion = (user) => {
+
+    return dispatch => {
+
+        axios({
+            url: 'http://movie0706.cybersoft.edu.vn/api/QuanLyNguoiDung/DangNhap',
+            method: "POST",
+            data: user,
+
+        }).then(result => {
+          
+            localStorage.setItem(settings.userLogin, JSON.stringify(result.data));
+            localStorage.setItem(settings.token, result.data.accessToken);
+
+            dispatch({
+                type: actionTypes.DANG_NHAP,
+                taiKhoan: result.data,
+            })
+          
+        }).catch(error => {
+            console.log(error.response.data);
+            swal.fire('Thông báo đăng nhập' , error.response.data, 'error');
+         
         })
     }
 }
